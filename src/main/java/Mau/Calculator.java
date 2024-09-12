@@ -23,7 +23,7 @@ public class Calculator extends JFrame {
 
     private JLabel lbNum1, lbNum2, lbResult;
     private JTextField txtNum1, txtNum2, txtResult;
-    private JButton btAdd, btSub, btMul, btDiv;
+    private JButton btAdd, btSub, btMul, btDiv,btExit;
 
     public Calculator(String title) {
         super(title);
@@ -50,6 +50,7 @@ public class Calculator extends JFrame {
         p2.add(btSub = new JButton("Sub"));
         p2.add(btMul = new JButton("Mul"));
         p2.add(btDiv = new JButton("Div"));
+        p2.add(btExit=new JButton("Kết thúc"));
 
         setLayout(new BorderLayout());
         add(p1);
@@ -104,6 +105,12 @@ public class Calculator extends JFrame {
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(null, "Giá trị không hợp lệ!");
             }
+        });
+        btExit.addActionListener((e) -> {
+            int chon =JOptionPane.showConfirmDialog(null, "Bạn có chắc đóng không?", "Hỏi lại", JOptionPane.YES_NO_OPTION);
+            if(chon==JOptionPane.YES_NO_OPTION){
+            System.exit(0);
+        }
         });
     }
 
