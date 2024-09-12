@@ -21,14 +21,14 @@ import javax.swing.JRadioButton;
  *
  * @author DELL
  */
-public class DemoJRdioButton extends JFrame {
+public class DemoJRadioButton extends JFrame {
 
     private JLabel lbNum1, lbNum2, lbOp, lbResult;
     private JTextField txtNum1, txtNum2, txtResult;
     private JButton btTinh, btNhapLai;
     private JRadioButton rdCong, rdTru, rdNhan, rdChia;
 
-    public DemoJRdioButton(String title) {
+    public DemoJRadioButton(String title) {
         super(title);
         createGUI();
 
@@ -117,7 +117,7 @@ public class DemoJRdioButton extends JFrame {
     
     public static void main(String[] args) {
         
-        DemoJRdioButton frm = new DemoJRdioButton("Simple  Calculaotor");
+        DemoJRadioButton frm = new DemoJRadioButton("Simple  Calculaotor");
         frm.setVisible(true);
     }
 
